@@ -109,6 +109,28 @@ export default function Home() {
         <div className="inline-form"><SignupForm compact /></div>
       </section>
 
+      <section className="gallery section" id="gallery">
+        <div className="gallery-heading">
+          <div><p className="eyebrow">никаких скучных постановок</p><h2>Как проходят занятия</h2></div>
+          <p>Работаем с натуры, пробуем разные материалы, обсуждаем идеи и постепенно собираем собственный художественный язык.</p>
+        </div>
+        <div className="gallery-grid">
+          {[
+            ["/assets/adult-2.jpg", "Ученица работает над портретом"],
+            ["/assets/adult-6.jpg", "Работа над натюрмортом в мастерской"],
+            ["/assets/adult-5.jpg", "Занятие по портрету"],
+            ["/assets/adult-3.jpg", "Работа над пейзажем"],
+            ["/assets/adult-4.jpg", "Ученица рисует городской пейзаж"],
+            ["/assets/adult-1.jpg", "Готовая работа на мольберте"],
+          ].map(([src, alt], i) => (
+            <figure className={`gallery-item gallery-item-${i + 1}`} key={src}>
+              <Image src={src} alt={alt} fill sizes="(max-width: 700px) 100vw, 34vw" />
+            </figure>
+          ))}
+        </div>
+        <p className="gallery-note">здесь можно пробовать, ошибаться и находить своё ↓</p>
+      </section>
+
       <section className="prices section" id="prices">
         <div className="section-heading"><p className="eyebrow">единый абонемент</p><h2>Цены</h2></div>
         <div className="price-benefits">{["все направления", "только посещённые занятия", "свободный график", "налоговый вычет", "скидка 10% после пробного"].map(x => <span key={x}>✓ {x}</span>)}</div>
