@@ -9,7 +9,10 @@ export default function SiteHeader() {
   return (
     <header className="topbar">
       <a className="brand" href="#top" aria-label="Баня — на главную" onClick={close}>
-        <Image src="/assets/logo.png" alt="Баня" width={128} height={92} priority />
+        <Image src="/assets/logo.png" alt="Баня" width={180} height={116} priority />
+      </a>
+      <a className="mobile-quick-contact" href="https://wa.me/79953012903" target="_blank" rel="noreferrer" aria-label="Написать в WhatsApp">
+        <span>WA</span><b>Написать</b>
       </a>
       <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-menu" onClick={() => setOpen(!open)}>
         <span /><span /><span /><b>{open ? "Закрыть" : "Меню"}</b>
@@ -18,8 +21,8 @@ export default function SiteHeader() {
         <nav aria-label="Основная навигация">
           <a href="#about" onClick={close}>о нас</a>
           <a href="#directions" onClick={close}>направления</a>
-          <a href="#teachers" onClick={close}>учителя</a>
           <a href="#reviews" onClick={close}>отзывы</a>
+          <a href="#steps" onClick={close}>пробное</a>
           <a href="#prices" onClick={close}>цены</a>
           <a href="#faq" onClick={close}>вопросы</a>
           <a href="#contacts" onClick={close}>контакты</a>
