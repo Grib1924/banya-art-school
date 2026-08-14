@@ -3,18 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const panel = document.querySelector('.header-panel');
   if (toggle && panel) {
     toggle.addEventListener('click', function () {
-      const opened = panel.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(opened));
+      const open = panel.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
       const label = toggle.querySelector('b');
-      if (label) label.textContent = opened ? 'Закрыть' : 'Меню';
+      if (label) label.textContent = open ? 'Закрыть' : 'Меню';
     });
     panel.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        panel.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        const label = toggle.querySelector('b');
-        if (label) label.textContent = 'Меню';
-      });
+      link.addEventListener('click', function () { panel.classList.remove('is-open'); });
     });
   }
   document.querySelectorAll('.signup-form').forEach(function (form) {
@@ -23,13 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const button = form.querySelector('button');
       if (button) button.textContent = 'Заявка принята ✓';
       let status = form.querySelector('.success');
-      if (!status) {
-        status = document.createElement('p');
-        status.className = 'success';
-        status.setAttribute('role', 'status');
-        form.appendChild(status);
-      }
-      status.textContent = 'Спасибо! Подключите эту форму к сервису приёма заявок в настройках Tilda.';
+      if (!status) { status = document.createElement('p'); status.className = 'success'; form.appendChild(status); }
+      status.textContent = 'Спасибо! Перед публикацией подключите форму к Tilda Forms или CRM.';
     });
   });
 });

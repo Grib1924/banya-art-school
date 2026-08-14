@@ -40,6 +40,21 @@ h3{font-size:clamp(30px,2.8vw,46px)}
   .scribble-note{top:calc(48svh - 72px)}
 }
 
+/* Header/logo correction and quieter hero accents */
+.hero-age{background:#fff;color:var(--blue);border:2px solid #fff}
+.scribble-note{border-color:var(--blue);box-shadow:4px 4px 0 rgba(255,255,255,.92)}
+
+@media(min-width:851px){
+  .topbar{min-height:80px;height:80px}
+  .brand{height:70px;display:flex;align-items:center;overflow:visible}
+  .brand img{width:126px;height:68px;object-fit:contain}
+  .hero{height:calc(100svh - 80px)}
+}
+
+@media(max-width:850px){
+  .brand img{width:98px;height:60px;object-fit:contain}
+}
+
 @media(max-width:370px){
   .brand{width:72px;height:60px}
   .brand img{width:60px;height:60px}
@@ -113,4 +128,63 @@ h3{font-size:clamp(30px,2.8vw,46px)}
   .gallery-item-5,.gallery-item-6{display:block}
   .gallery-note{margin-top:25px;font-size:17px}
   .scribble-note{top:92px;bottom:auto;right:10px}
+}
+
+@media(min-width:851px){
+  .brand{height:62px;padding:4px 0}
+  .brand img{position:relative;top:5px;width:104px;height:56px;object-fit:contain}
+}
+
+/* The note lives in the content flow, so it cannot cover copy or imagery. */
+.hero-copy .scribble-note{position:static;display:block;width:max-content;max-width:100%;margin:23px 0 0 10px;padding:10px 16px;transform:rotate(-3deg);font-size:18px;box-shadow:3px 3px 0 rgba(255,255,255,.9)}
+
+@media(max-width:850px){
+  .brand{height:56px;padding:4px 0;display:flex;align-items:center;overflow:visible}
+  .brand img{position:relative;top:3px;width:82px;height:48px;object-fit:contain}
+  .hero-copy .scribble-note{position:static;margin:20px auto 0 8px;padding:9px 14px;font-size:16px}
+}
+
+@media(max-width:370px){
+  .brand img{width:76px;height:44px}
+}
+
+/* Native Tilda-compatible form metadata stays hidden; consent remains visible. */
+.signup-form>input[type="hidden"]{display:none}
+.signup-form .form-consent{grid-column:1/-1;display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start}
+.signup-form .form-consent input{width:18px;height:18px;min-height:0;margin:0;accent-color:var(--blue)}
+.signup-form .form-consent small{display:block}
+
+/* Mid-page consultation: distinct from the free-trial forms and responsive. */
+.consultation-form{max-width:1120px;padding:34px;display:grid;grid-template-columns:minmax(250px,.72fr) minmax(520px,1.28fr);gap:34px;align-items:center;background:var(--yellow);border:3px solid var(--blue);border-radius:35px 44px 31px 39px;box-shadow:9px 9px 0 rgba(30,13,179,.18)}
+.consultation-copy h3{margin:0 0 14px;font-size:clamp(34px,3.2vw,50px)}
+.consultation-copy>p:last-child{margin:0;max-width:520px;font-size:14px;line-height:1.6}
+.consultation-form .signup-form{box-shadow:7px 7px 0 var(--pink)}
+
+/* Branches appear near the top as well as in the footer. */
+.early-locations{padding:58px clamp(22px,6vw,96px) 70px;display:grid;grid-template-columns:minmax(230px,.62fr) minmax(560px,1.38fr);gap:5vw;align-items:center;background:#fff;border-bottom:var(--line)}
+.early-locations-heading h2{font-size:clamp(38px,4vw,62px)}
+.early-location-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.early-location-card{min-height:174px;padding:24px;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:start;background:var(--blue);color:#fff;border:3px solid var(--blue);border-radius:26px 34px 24px 30px;transition:transform .2s,box-shadow .2s}
+.early-location-card:nth-child(2){background:var(--pink);color:var(--blue)}
+.early-location-card:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--yellow)}
+.early-location-card>span{font-family:"Pangolin",cursive;font-size:25px;color:var(--yellow)}
+.early-location-card:nth-child(2)>span{color:#fff}
+.early-location-card small{display:block;margin-bottom:9px;font-size:11px;font-weight:900;text-transform:uppercase}
+.early-location-card h3{margin:0 0 10px;font-size:clamp(27px,2.5vw,38px)}
+.early-location-card p{margin:0;font-size:13px;font-weight:700;line-height:1.4}
+.early-location-card>b{width:34px;height:34px;display:grid;place-items:center;border:2px solid currentColor;border-radius:50%;font-size:18px}
+
+@media(max-width:900px){
+  .consultation-form{grid-template-columns:1fr;padding:28px;gap:24px}
+  .early-locations{grid-template-columns:1fr;gap:28px}
+}
+
+@media(max-width:600px){
+  .consultation-form{margin-top:48px;padding:20px 16px;border-radius:26px;box-shadow:6px 6px 0 rgba(30,13,179,.18)}
+  .consultation-copy h3{font-size:34px}
+  .consultation-copy>p:last-child{font-size:13px}
+  .consultation-form .signup-form{padding:16px;box-shadow:5px 5px 0 var(--pink)}
+  .early-locations{padding:42px 17px 52px}
+  .early-location-list{grid-template-columns:1fr}
+  .early-location-card{min-height:146px;padding:20px;gap:13px}
 }
