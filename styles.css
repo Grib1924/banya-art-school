@@ -30,3 +30,151 @@ footer{padding:130px clamp(24px,6vw,100px) 28px;background:var(--blue);color:#ff
 @media(max-width:1160px){.header-panel nav{gap:13px}.header-panel nav a{font-size:11px}.contact-button{display:none}.hero{grid-template-columns:46% 54%}.hero-copy{padding-right:30px}.step-grid{grid-template-columns:repeat(3,1fr)}.price-benefits{grid-template-columns:repeat(3,1fr)}.price-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:860px){.section{padding:105px 24px}.section-heading{margin-bottom:58px}.topbar{min-height:78px}.brand{height:60px}.menu-toggle{display:grid;grid-template-columns:20px auto;align-items:center;gap:4px 8px;min-height:44px;padding:8px 12px;background:#fff;border:0;color:var(--blue)}.menu-toggle span{grid-column:1;width:20px;height:2px;background:var(--blue)}.menu-toggle b{grid-column:2;grid-row:1/4;font-size:11px}.header-panel{display:none;position:absolute;left:0;right:0;top:77px;padding:26px;background:#fff;border-bottom:1px solid rgba(30,13,179,.18)}.header-panel.is-open{display:block}.header-panel nav{display:grid;grid-template-columns:repeat(3,1fr)}.header-panel nav a{padding:12px 4px}.header-actions{margin-top:18px}.contact-button{display:inline-flex}.hero{min-height:auto;grid-template-columns:1fr}.hero-photo{min-height:60svh}.hero-copy{padding:65px 24px 100px}.hero-note{right:8%;bottom:5%}.hero-facts{grid-template-columns:1fr 1fr;padding:55px 24px;gap:36px}.early-locations{grid-template-columns:1fr;padding:90px 24px}.location-list{margin-top:15px}.about-grid{grid-template-columns:1fr}.about-photo{position:relative;top:auto;min-height:620px;margin-bottom:35px}.manifesto{margin-top:90px}.course-list{gap:80px}.course,.course:nth-child(even){grid-template-columns:1fr}.course:nth-child(even) .course-image{order:0}.course-image{min-height:480px}.course-copy{padding:45px 15px 0}.trial-band{grid-template-columns:1fr;padding:100px 24px}.signup-form{grid-template-columns:1fr 1fr}.signup-form button{grid-column:1/-1}.review-grid{grid-template-columns:1fr}.review{min-height:300px}.step-grid{grid-template-columns:1fr 1fr}.consultation-form,.price-form{grid-template-columns:1fr;padding:42px;gap:35px}.gallery-grid{grid-auto-rows:170px}.gallery-grid figure,.gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2){grid-column:span 6;grid-row:span 2}.price-benefits{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}.address-list{margin-top:20px}}
 @media(max-width:600px){h1{font-size:36px}h2{font-size:38px}.section{padding:86px 17px}.section-heading{margin-bottom:44px}.topbar{padding:8px 17px}.brand{width:90px}.brand img{width:74px;height:54px}.header-panel nav{grid-template-columns:1fr 1fr}.header-actions{display:grid;grid-template-columns:1fr 1fr}.mini-cta{grid-column:1/-1}.hero-photo{min-height:48svh}.hero-copy{padding:52px 17px 72px}.hero-lead{font-size:14px}.organic-button{width:100%;padding:18px 25px;font-size:12px}.hero-note{display:grid;width:max-content;margin:30px auto 0;font-size:17px}.hero-facts{grid-template-columns:1fr;padding:48px 17px}.early-locations{padding:75px 17px}.location-list{grid-template-columns:1fr;gap:34px}.location-list a{min-height:165px;padding:30px 34px}.about-photo{min-height:470px}.benefit-list li{grid-template-columns:42px 1fr}.benefit-list p{font-size:14px}.manifesto{padding:62px 26px;margin-top:75px;font-size:25px}.course-image{min-height:350px}.course-copy{padding-top:35px}.course-copy p{font-size:14px}.trial-band{padding:82px 17px}.signup-form{grid-template-columns:1fr;padding:24px 18px}.signup-form button,.signup-form small,.signup-form .success{grid-column:1}.signup-form .form-consent{grid-column:1}.review{padding:34px 25px}.step-grid{grid-template-columns:1fr}.step-grid li{min-height:190px}.consultation-form{margin-top:85px;padding:36px 17px}.gallery-grid{display:grid;grid-template-columns:1fr;grid-auto-rows:300px;gap:18px}.gallery-grid figure,.gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2){grid-column:1;grid-row:auto}.price-benefits{grid-template-columns:1fr}.price-benefits span{min-height:105px;padding:24px 32px}.price-grid{grid-template-columns:1fr}.price-card{min-height:270px}.price-form{margin-top:85px;padding:36px 17px}.price-form h3{font-size:31px}.address-list,.maps{grid-template-columns:1fr}.address-list article{padding:35px 28px}.maps iframe{height:270px}.footer-bottom{flex-direction:column}}
+
+/* Return to the previous, calmer composition while retaining the approved brand fixes. */
+body{background:#fffefb;color:var(--blue)}
+h1,h2,h3{font-weight:600;letter-spacing:-.035em;line-height:1.04}
+h1{font-size:clamp(40px,4.15vw,62px)}
+h2{font-size:clamp(40px,4vw,62px)}
+.section{padding:112px clamp(24px,6vw,96px)}
+.section-heading{margin-bottom:62px}
+
+.topbar{min-height:82px;padding:5px clamp(20px,3vw,48px)}
+.brand{width:104px;height:62px;overflow:visible}
+.brand img{width:104px;height:56px;object-fit:contain;transform:none}
+.contact-button,.mini-cta{min-height:44px;padding:0 17px;border:2px solid var(--blue);border-radius:10px;background:#fff;color:var(--blue)}
+.contact-button:before,.mini-cta:before{display:none}
+.contact-button.message,.mini-cta{background:var(--blue);color:#fff}
+
+.hero{min-height:650px;height:calc(100svh - 82px);max-height:840px;grid-template-columns:50% 50%}
+.hero-photo{min-height:650px}
+.hero-copy{padding:54px clamp(34px,4vw,64px) 62px 34px}
+.hero-copy h1{max-width:700px;margin-bottom:22px}
+.hero-lead{max-width:590px;font-size:16px;line-height:1.58}
+.organic-button{min-height:56px;padding:15px 26px;color:#fff}
+.organic-button:before{inset:-9px -15px;background-image:url('/assets/brand-shapes/shape-6-blue.png')}
+.hero-note{display:block;width:max-content;max-width:100%;margin:23px 0 0 10px;padding:0;color:var(--pink);font-size:18px;transform:rotate(-3deg)}
+.hero-note:before{display:none}
+
+.hero-facts{padding:0 clamp(24px,6vw,96px);gap:0;border-bottom:1px solid rgba(30,13,179,.28)}
+.hero-facts article{min-height:138px;padding:30px 28px;display:block;border-right:1px solid rgba(30,13,179,.28)}
+.hero-facts article:first-child{border-left:1px solid rgba(30,13,179,.28)}
+.hero-facts span{display:block;margin-bottom:12px}
+.hero-facts p{font-size:13px}
+
+.early-locations{padding:78px clamp(24px,6vw,96px);grid-template-columns:minmax(230px,.62fr) minmax(560px,1.38fr);gap:5vw;background:#fff;border-bottom:1px solid rgba(30,13,179,.28)}
+.location-list{gap:16px}
+.location-list a{min-height:174px;padding:27px 30px;background:var(--blue);color:#fff}
+.location-list a:nth-child(2){background:var(--soft-pink);color:var(--blue)}
+.location-list a:before{display:none}
+.location-list h3{margin:15px 0 9px}
+
+.about-grid{grid-template-columns:minmax(340px,.9fr) minmax(430px,1.1fr);gap:7vw}
+.about-photo{position:sticky;top:115px;min-height:720px;overflow:visible}
+.about-photo-main{object-fit:cover}
+.about-photo-small{position:absolute;right:-28px;bottom:38px;width:48%;height:230px;object-fit:cover;border:12px solid #fff}
+.about-photo>span{position:absolute;left:24px;bottom:32px;padding:15px 20px;background:var(--pink);color:var(--blue);font-family:"Pangolin",cursive;font-size:18px;line-height:1.05;transform:rotate(-3deg)}
+.manifesto{max-width:1040px;margin-top:105px;padding:62px 7vw;background:var(--blue);font-size:clamp(26px,3.3vw,48px)}
+.manifesto:before{display:none}
+
+.course-list{gap:26px}
+.course{grid-template-columns:44% 56%;min-height:500px;background:#fff;color:var(--blue)}
+.course:nth-child(even){grid-template-columns:56% 44%}
+.course:nth-child(even) .course-image{order:2}
+.course-image{min-height:500px}
+.course-copy{padding:clamp(34px,6vw,82px)}
+.course-copy a{padding:0 0 4px;border-bottom:2px solid var(--hot);color:var(--hot)}
+.course-copy a:before{display:none}
+
+.trial-band{padding:95px clamp(24px,6vw,96px);background:var(--pink)}
+.signup-form{padding:30px;border:0;background:#fff}
+.signup-form button{background:var(--blue);border-radius:10px}
+.signup-form button:before{display:none}
+
+.review-grid{gap:24px}
+.review{min-height:380px;padding:42px 34px;background:#fff;border:2px solid var(--blue)}
+.review:nth-child(2){background:var(--blue);color:#fff}
+.review:nth-child(3){background:var(--soft-pink);border-color:var(--soft-pink)}
+
+.steps{background:var(--soft-pink)}
+.step-grid{gap:14px;align-items:stretch}
+.step-grid li{min-height:255px;height:100%;padding:26px;background:#fff}
+.step-grid li:nth-child(even){background:var(--blue);color:#fff}
+.step-grid span{width:auto;height:auto;display:block;color:var(--hot);font-size:46px}
+.step-grid span:before{display:none}
+.consultation-form{margin-top:92px;padding:44px;background:#fff}
+
+.gallery{background:#fff;color:var(--blue)}
+.gallery .light,.gallery .light .eyebrow{color:var(--blue)}
+.gallery-grid{grid-template-columns:1.15fr .85fr 1fr;grid-template-rows:300px 340px;grid-auto-rows:auto;gap:16px}
+.gallery-grid figure,.gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2){grid-column:auto;grid-row:auto}
+.gallery-grid figure:nth-child(1){grid-row:1/3}
+.gallery-grid figure:nth-child(3){grid-row:1/3}
+.gallery-grid figure:nth-child(n+4){display:none}
+
+.price-benefits{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:52px}
+.price-benefits span{min-height:auto;padding:14px 20px;display:block;background:var(--pink);color:var(--blue);text-align:left}
+.price-benefits span:before{display:none}
+.price-grid{gap:16px}
+.price-card{min-height:300px;padding:32px 27px;background:#f0eeff}
+.price-card.hit{background:var(--blue);color:#fff}
+.price-card em{top:-20px;padding:10px 16px;background:#fff;color:var(--blue)}
+.price-card em:before{display:none}
+.price-card a{padding:13px;background:var(--pink);color:var(--blue);border-radius:10px}
+.price-card a:before{display:none}
+.price-card.hit a{color:var(--blue)}
+.price-form{margin-top:85px;padding:44px;background:var(--soft-pink)}
+
+.faq-list summary b{background:#fff;color:var(--blue);border-radius:50%}
+.faq-list summary b:before{display:none}
+.address-list article,.maps iframe{border-radius:0}
+
+@media(max-width:900px){
+  .early-locations{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{position:relative;top:auto;min-height:620px;margin-bottom:35px}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:360px 300px}
+  .gallery-grid figure:nth-child(1){grid-row:1/3}
+  .gallery-grid figure:nth-child(3){grid-row:auto}
+}
+
+@media(max-width:860px){
+  .topbar{min-height:78px}
+  .brand{width:82px;height:56px}
+  .brand img{width:82px;height:48px}
+  .hero{height:auto;max-height:none;grid-template-columns:1fr}
+  .hero-photo{min-height:54svh}
+  .hero-copy{padding:48px 24px 72px}
+  .hero-facts{grid-template-columns:1fr 1fr;padding:0 24px}
+  .hero-facts article:nth-child(odd){border-left:1px solid rgba(30,13,179,.28)}
+  .course,.course:nth-child(even){grid-template-columns:1fr}
+  .course:nth-child(even) .course-image{order:0}
+}
+
+@media(max-width:600px){
+  h1{font-size:35px}
+  h2{font-size:36px}
+  .section{padding:82px 17px}
+  .hero-photo{min-height:48svh}
+  .hero-copy{padding:40px 17px 62px}
+  .organic-button{width:100%}
+  .hero-facts{grid-template-columns:1fr;padding:0 17px}
+  .hero-facts article,.hero-facts article:first-child,.hero-facts article:nth-child(odd){min-height:112px;border-left:1px solid rgba(30,13,179,.28);border-right:1px solid rgba(30,13,179,.28);border-bottom:1px solid rgba(30,13,179,.28)}
+  .early-locations{padding:62px 17px}
+  .location-list{grid-template-columns:1fr}
+  .about-photo{min-height:500px}
+  .about-photo-small{right:-8px;bottom:26px;width:54%;height:170px;border-width:8px}
+  .about-photo>span{left:12px;bottom:20px;font-size:16px}
+  .course-image{min-height:340px}
+  .course-copy{padding:34px 20px}
+  .trial-band{padding:72px 17px}
+  .review{min-height:300px}
+  .steps{padding-top:82px;padding-bottom:82px}
+  .step-grid li{min-height:170px}
+  .consultation-form{margin-top:62px;padding:28px 18px}
+  .gallery-grid{display:flex;gap:12px;margin-inline:-17px;padding-inline:17px;overflow-x:auto;scroll-snap-type:x mandatory}
+  .gallery-grid figure,.gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2),.gallery-grid figure:nth-child(3),.gallery-grid figure:nth-child(n+4){flex:0 0 82vw;height:430px;display:block;scroll-snap-align:center}
+  .price-benefits{display:grid}
+  .price-grid{grid-template-columns:1fr}
+  .price-form{margin-top:62px;padding:30px 18px}
+}
