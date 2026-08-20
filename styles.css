@@ -245,3 +245,36 @@ h1,h2,h3,.eyebrow{text-transform:lowercase}
 }
 
 footer .address-list article:first-child{background:#fff;color:var(--blue)}
+
+/* Desktop hero correction: strict columns, visible CTA, and correctly scaled logo artwork. */
+.hero .organic-button{
+  background:var(--pink);
+  color:var(--blue);
+  border-radius:10px;
+}
+.hero .organic-button:before{display:none}
+
+@media(min-width:961px){
+  .topbar .brand{width:150px;height:62px;overflow:visible}
+  .topbar .brand img{
+    width:104px;
+    height:56px;
+    object-fit:contain;
+    transform:scale(3.2);
+    transform-origin:center;
+  }
+  .hero{grid-template-columns:minmax(0,45%) minmax(0,55%)}
+  .hero-photo{
+    min-width:0;
+    overflow:hidden;
+    contain:paint;
+    isolation:isolate;
+  }
+  .hero-copy{
+    z-index:2;
+    min-width:0;
+    width:100%;
+    padding-left:clamp(46px,4vw,68px);
+    background:var(--royal);
+  }
+}
