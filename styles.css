@@ -243,3 +243,5 @@ h1,h2,h3,.eyebrow{text-transform:lowercase}
   .hero-photo{min-height:48svh}
   .hero-copy{padding:40px 17px 62px}
 }
+
+footer .address-list article:first-child{background:#fff;color:var(--blue)}
