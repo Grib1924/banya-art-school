@@ -228,3 +228,18 @@ h2{font-size:clamp(40px,4vw,62px)}
   .manifesto{gap:18px;padding:44px 24px;font-size:24px}
   .manifesto mark{padding:1px 5px 3px}
 }
+
+/* Lowercase display headings and protect the hero at narrow tablet widths. */
+h1,h2,h3,.eyebrow{text-transform:lowercase}
+
+@media(max-width:960px){
+  .hero{height:auto;max-height:none;grid-template-columns:1fr}
+  .hero-photo{min-height:54svh}
+  .hero-copy{width:100%;padding:48px 24px 72px}
+  .hero-copy h1{max-width:760px}
+}
+
+@media(max-width:600px){
+  .hero-photo{min-height:48svh}
+  .hero-copy{padding:40px 17px 62px}
+}
