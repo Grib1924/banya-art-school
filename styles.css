@@ -72,7 +72,6 @@ h2{font-size:clamp(40px,4vw,62px)}
 .about-grid{grid-template-columns:minmax(340px,.9fr) minmax(430px,1.1fr);gap:7vw}
 .about-photo{position:sticky;top:115px;min-height:720px;overflow:visible}
 .about-photo-main{object-fit:cover}
-.about-photo-small{position:absolute;right:-28px;bottom:38px;width:48%;height:230px;object-fit:cover;border:12px solid #fff}
 .about-photo>span{position:absolute;left:24px;bottom:32px;padding:15px 20px;background:var(--pink);color:var(--blue);font-family:"Pangolin",cursive;font-size:18px;line-height:1.05;transform:rotate(-3deg)}
 .manifesto{max-width:1040px;margin-top:105px;padding:62px 7vw;background:var(--blue);font-size:clamp(26px,3.3vw,48px)}
 .manifesto:before{display:none}
@@ -163,7 +162,6 @@ h2{font-size:clamp(40px,4vw,62px)}
   .early-locations{padding:62px 17px}
   .location-list{grid-template-columns:1fr}
   .about-photo{min-height:500px}
-  .about-photo-small{right:-8px;bottom:26px;width:54%;height:170px;border-width:8px}
   .about-photo>span{left:12px;bottom:20px;font-size:16px}
   .course-image{min-height:340px}
   .course-copy{padding:34px 20px}
