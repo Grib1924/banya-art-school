@@ -263,7 +263,12 @@ footer .address-list article:first-child{background:#fff;color:var(--blue)}
     transform:scale(3.2);
     transform-origin:center;
   }
-  .hero{grid-template-columns:minmax(0,45%) minmax(0,55%)}
+  .hero{
+    height:auto;
+    max-height:none;
+    min-height:max(650px,calc(100svh - 82px));
+    grid-template-columns:minmax(0,45%) minmax(0,55%);
+  }
   .hero-photo{
     min-width:0;
     overflow:hidden;
